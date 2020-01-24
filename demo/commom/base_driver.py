@@ -20,6 +20,8 @@ def test_base():
     desired_caps['appPackage'] = 'com.tencent.mm'
     desired_caps['appActivity'] = 'com.tencent.mm.ui.LauncherUI'
     desired_caps['noReset'] = 'true'
+    desired_caps['unicodeKeyboard'] = 'true'
+    desired_caps['resetKeyboard'] = 'true'
     desired_caps['automationName'] = 'UiAutomator2'
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return driver

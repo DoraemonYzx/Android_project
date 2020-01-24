@@ -5,7 +5,7 @@
 @file: base_driver.py
 @time: 2020/01/24
 """
-from selenium import webdriver
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from appium import webdriver
@@ -111,7 +111,7 @@ class BaseAction:
             result = WebDriverWait(self.driver, self.timeout, self.t).until(EC.title_is(_title))
             print("True 标题->%s 符合预期" % _title)
             return result
-        except BaseException:
+        except:
             print("False 标题->%s 不符合预期" % _title)
             return False
 
